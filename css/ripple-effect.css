@@ -1,0 +1,40 @@
+/*
+# Creator: Aryon Rabello
+# GitHub: https://github.com/arriaoedu123/
+# Creation date: 18/11/2021
+# Version: 1.0
+*/
+
+.ripple {
+	cursor: pointer;
+	overflow: hidden;
+	position: relative;
+}
+
+.wave {
+	--top: 0;
+	--left: 0;
+	--scale: 0;
+	--opacity: 0;
+	pointer-events: none;
+	background: transparent;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	will-change: transform;
+	transform: translateX(var(--left)) translateY(var(--top));
+}
+
+.wave:after {
+	content: "";
+	display: block;
+	border-radius: 50%;
+	width: 8px;
+	height: 8px;
+	background: rgba(255, 255, 255, .4);
+	will-change: transform;
+	transform: scale(var(--scale));
+	opacity: var(--opacity);
+	transition: transform .5s, opacity .3s;
+}

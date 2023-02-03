@@ -1,0 +1,170 @@
+/*
+# Creator: Aryon Rabello
+# GitHub: https://github.com/arriaoedu123/
+# Creation date: 03/02/2023
+# Version: 1.0
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 400px;
+}
+
+.preview-div {
+  width: 100%;
+  height: 204px;
+  padding: 0;
+  border: 2px solid #007bff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.thumbnail {
+  width: 100%;
+  display: none;
+}
+
+.preview-div.active .thumbnail {
+  display: block;
+}
+
+.preview-div i {
+  margin-bottom: 20px;
+  background-color: transparent;
+  color: #007bff;
+  font-size: 48px;
+}
+
+.preview-div span {
+  font-size: 18px;
+}
+
+.preview-div.active i,
+.preview-div.active span {
+  display: none;
+}
+
+.form-field {
+  width: 100%;
+  display: none;
+  position: relative;
+  margin-top: 20px;
+}
+
+.form-field.active {
+  display: flex;
+}
+
+.form-field input {
+  height: 48px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 20px 14px 6px;
+  border-top: 2px solid #007bff;
+  border-left: 2px solid #007bff;
+  border-bottom: 2px solid #007bff;
+  background-color: transparent;
+  border-radius: 4px 0 0 4px;
+}
+
+.form-field input:focus,
+.form-field input:valid {
+  background-color: #f5f5f5;
+}
+
+.form-field input:focus ~ label,
+.form-field input:valid ~ label {
+  transform: translateY(-106%) scale(0.8);
+  color: #007bff;
+}
+
+.form-field label {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transform-origin: left top;
+  transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+
+.button {
+  width: 20%;
+  height: 48px;
+  border: none;
+  outline: none;
+  background: #007bff;
+  font-size: 18px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.button i {
+  color: #ffffff;
+}
+
+@media (prefers-color-scheme: light) {
+  .container {
+    background: #fff;
+  }
+
+  .preview-div span {
+    color: #000;
+  }
+
+  .form-field input {
+    color: rgba(0, 0, 0, 0.87);
+  }
+
+  .form-field input:focus,
+  .form-field input:valid {
+    background-color: #f5f5f5;
+  }
+
+  .form-field label {
+    color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .container {
+    background: #343a40;
+  }
+
+  .preview-div span {
+    color: #ffffff;
+  }
+
+  .form-field input {
+    color: rgba(255, 255, 255, 0.87);
+  }
+
+  .form-field input:focus,
+  .form-field input:valid {
+    background-color: #2a3036;
+  }
+
+  .form-field label {
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
