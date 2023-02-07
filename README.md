@@ -1,11 +1,6 @@
 # Youtube Thumbnail Downloader
 This is a Chrome extension project that allows users to download video thumbnails from YouTube.
 
-## Features
-- Allows users to download video thumbnails from YouTube with just one click.
-- Offers a selection of thumbnails in different sizes for choice.
-- Easy to use and intuitive.
-
 ## Installation
 1. Download this repository.
 2. Go to <b>chrome://extensions/</b>.
